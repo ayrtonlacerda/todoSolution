@@ -11,7 +11,10 @@ const TaskSchema = new mongoose.Schema({
     require: true,
     default: null,
   },
-  // subprotject: {},
+  subproject: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Project',
+  },
   check: {
     type: Boolean,
     required: true,
